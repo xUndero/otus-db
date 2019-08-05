@@ -1,0 +1,18 @@
+---
+sudo: required
+language: python
+python: 2.7
+services:
+  - docker
+before_install:
+  - sudo apt-get -qq update
+install:
+  - pip install molecule docker docker-py
+  # - pip install required driver (e.g. docker, python-vagrant, shade, boto, apache-libcloud)
+  - molecule init scenario --scenario-name default -r otus-db
+script:
+  - molecule test
+notifications:
+  slack:
+    rooms:
+      secure: VNYth+pcz4kYPJuYIVniGzBhpKImpcu/rtR2lD4cAJZsnmhrBjeUCq0bHsG+synW4e9KxDvdlNWE9w6fOsL7YCsa2y9u/fnV3dCnozembKWcLoTz/KpQMXREHc8SdDfgUmFpzafBS+Yw+3cmVo3+LmRLpLe/TDkkR$

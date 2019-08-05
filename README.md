@@ -1,4 +1,4 @@
-Role Name
+otus_db [![Build Status](https://travis-ci.com/xUndero/otus-db.svg?branch=master)](https://travis-ci.com/xUndero/otus-db)
 =========
 
 A brief description of the role goes here.
