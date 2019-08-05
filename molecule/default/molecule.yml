@@ -10,7 +10,7 @@ platforms:
     # image: solita/ubuntu-systemd:16.04
     # image: akshshar/ubuntu_iproute2_docker
     image: ubuntu:16.04
-    privileged: True
+    # privileged: True
     command: /sbin/init
     capabilities:
       - SYS_ADMIN
@@ -25,4 +25,3 @@ verifier:
   name: testinfra
   lint:
     name: flake8
-

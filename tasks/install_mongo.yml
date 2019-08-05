@@ -18,6 +18,14 @@
     state: present
   tags: install
 
+- name: Install tool
+  apt:
+    name: net-tools
+    allow_unauthenticated: yes
+    state: present
+    # update_cache: yes
+  tags: install
+
 - name: Configure service supervisor
   systemd:
     name: mongod

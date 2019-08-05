@@ -22,5 +22,5 @@ def test_config_file(host):
 
 # check listening address&port
 def test_listening(host):
-    test_socket = host.socket('tcp://27017')
+    test_socket = host.socket('tcp://0.0.0.0:27017')
     assert test_socket.is_listening
